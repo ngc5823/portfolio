@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.video-row {
+    display: flex; /* Enables Flexbox */
+    justify-content: space-around; /* Distributes space evenly */
+    align-items: center; /* Aligns videos vertically */
+    padding: 20px;
+    gap: 20px; /* Adds space between videos */
+    flex-wrap: wrap; /* Ensures videos wrap on smaller screens */
+    overflow: hidden;
+}
+
+.hover-video {
+    width: 20%; /* Adjust as needed */
+    max-width: 300px; /* Ensures videos don’t get too large */
+    height: auto; /* Keeps aspect ratio */
+    border: 2px solid #ccc; /* Optional: Borders for clarity */
+    border-radius: 10px; /* Optional: Rounded corners */
+    cursor: pointer; /* Changes the cursor to indicate interactivity */
+    transition: transform 0.2s ease-in-out; /* Smooth scaling effect */
+}
+
+.hover-video:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    border-color: #333; /* Change border color on hover */
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}

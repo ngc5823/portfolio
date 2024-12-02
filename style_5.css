@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.video-row {
+    display: flex; /* Enables Flexbox */
+    justify-content: flex-start; /* Distributes space evenly */
+    align-items: center; /* Aligns videos vertically */
+    padding: 50px;
+    gap: 500px; /* Adds space between videos */
+    flex-wrap: wrap; /* Ensures videos wrap on smaller screens */
+    overflow: hidden;
+    z-index: 1; /* Ensures the hovered video appears above neighbors */
+}
+
+.hover-video {
+    width: 20%; /* Adjust as needed */
+    max-width: 1200px; /* Ensures videos don’t get too large */
+    height: auto; /* Keeps aspect ratio */
+    border: 0px solid white; /* Optional: Borders for clarity */
+    cursor: pointer; /* Changes the cursor to indicate interactivity */
+    transition: transform 0.2s ease-in-out; /* Smooth scaling effect */
+}
+
+.hover-video:hover {
+    transform: scale(2); /* Slight zoom effect on hover */
+    /*border-color: #333;*/ /* Change border color on hover */
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    display: flex;
+    height: 100px;
+    gap: 500px; /* Adds space between videos */
+}
+
+.main-container {
+    max-width: 1200px; /* Maximum width for the content */
+    width: 100%; /* Ensures it takes full width up to the max-width */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 20px; /* Space inside the container */
+    background-color: #ffffff; /* Background color of the container */
+    border: 1px solid #ccc; /* Optional border for the container */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        max-width: 100%; /* Allow full width on smaller screens */
+        padding: 1000px;  /* Adjust padding for smaller screens */
+        border:100px;
+    }
+}
